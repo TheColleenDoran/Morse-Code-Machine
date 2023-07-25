@@ -138,7 +138,66 @@ public class Tree {
         pointer.right = newNode;
         newNode.parent = pointer;
         pointer = newNode;
+        newNode = new Node('C');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+        newNode = new Node('Y');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+
+        pointer = pointer.parent.parent; //on T
+        newNode = new Node('M');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('G');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+        pointer =newNode;
+        newNode = new Node('Z');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('7');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+
+        pointer = pointer.parent; //on G
+        newNode = new Node('Q');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+
+        pointer = pointer.parent; //on M
+        newNode = new Node('O');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node(' ');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('8');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+
+        pointer = pointer.parent; //on O
+        newNode = new Node(' ');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('9');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+        newNode = new Node('0');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+
+        resetPointer();
 
         return morseTree;
     }  
+
+    public void resetPointer(){
+        pointer = root;
+    }
 }
