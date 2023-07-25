@@ -65,7 +65,79 @@ public class Tree {
         newNode.parent = pointer;
 
         pointer = pointer.parent.parent.parent; //on E
+        newNode = new Node('A');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('R');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('L');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+        newNode = new Node(' ');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('+');
+        pointer.left = newNode;
+        newNode.parent = pointer;
 
+        pointer = pointer.parent.parent; //on A
+        newNode = new Node('W');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('P');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+        newNode = new Node('J');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('1');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+
+        pointer = root; //on Root
+        newNode = new Node('T');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('N');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('D');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('B');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('6');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+        newNode = new Node('=');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+
+        pointer = pointer.parent; //on D
+        newNode = new Node('X');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
+        newNode = new Node('/');
+        pointer.left = newNode;
+        newNode.parent = pointer;
+
+        pointer = pointer.parent.parent; //on N
+        newNode = new Node('K');
+        pointer.right = newNode;
+        newNode.parent = pointer;
+        pointer = newNode;
 
         return morseTree;
     }  
