@@ -6,11 +6,11 @@
  */
 
 public class Tree {
-    public Node pointer = null;
-    public Node root = null;
+    public static Node pointer = null;
+    public static Node root = null;
    
 // building Morse Code Binary Tree 
-    public Tree buildMorseCodeTree() {
+    public static Tree buildMorseCodeTree() {
     //creating the Tree and setting the root
         Tree morseTree = new Tree();
         Node  newNode = new Node(' ');
@@ -197,7 +197,50 @@ public class Tree {
         return morseTree;
     }  
 
-    public void resetPointer(){
+    public static void resetPointer(){
         pointer = root;
+    }
+
+    public char checkChar(char given) throws Exception{
+        char result = '\0'; //sets result to null character
+        char toCheck = given;
+
+        if(toCheck == ' '){
+            //check if at root
+            //check contents and if it has a parent
+            //else throw exception
+            if(pointer.letter == ' '){
+                if(pointer == root){
+                    result = ' ';
+                    resetPointer();
+                }else{
+                    //throw exception
+                    //pointer ended on an invalid node which means that the dot/dash order is incorrect
+                }
+            }else{
+                result = pointer.letter;
+                resetPointer();
+            }
+        } else{
+            //either dot or dash, move sides
+            //if unsuported char, throw excetption
+            if(toCheck == '.'){
+                if(pointer.left != null){
+                    pointer = pointer.left;
+                }else{
+                    //throw no left child exception
+                }
+            }else if(toCheck == '-'){
+                if(pointer.right != null){
+                    pointer = pointer.right;
+                }else{
+                    //throw no right child exception
+                }
+            }else{
+                //throw unsupported character expection
+            }
+        }
+
+        return result;
     }
 }
