@@ -216,6 +216,7 @@ public class Tree {
                 }else{
                     //throw exception
                     //pointer ended on an invalid node which means that the dot/dash order is incorrect
+                    throw new Exception("001: Invalid morse code sequence. Please double check your spelling.");
                 }
             }else{
                 result = pointer.letter;
@@ -228,16 +229,19 @@ public class Tree {
                 if(pointer.left != null){
                     pointer = pointer.left;
                 }else{
-                    //throw no left child exception
+                    //no left child
+                    throw new Exception("002: Invalid morse code sequence. Please double check your spelling.");
                 }
             }else if(toCheck == '-'){
                 if(pointer.right != null){
                     pointer = pointer.right;
                 }else{
-                    //throw no right child exception
+                    //no right child exception
+                    throw new Exception("003: Invalid morse code sequence. Please double check your spelling.");
                 }
             }else{
-                //throw unsupported character expection
+                //unsupported character expection
+                throw new Exception("004: Invalid morse code sequence. Please double check your spelling.");
             }
         }
 

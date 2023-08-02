@@ -4,7 +4,8 @@
  */
 public class Main {
     public static final void main(String[] args) {
-        System.out.println("Hello World!");
+        MorseMaster carl = new MorseMaster();
+        System.out.println(carl.decipher("... --- ..."));
     }
 }
 

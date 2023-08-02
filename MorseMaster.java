@@ -17,6 +17,7 @@ public class MorseMaster {
                         temp = '\0';
                     }else{
                         //throw out of bounds exception, it shouldn't do this but just in case
+                        throw new Exception("005: Deciphered message has exceeded character limit. Panic.");
                     }
                 }
             }
