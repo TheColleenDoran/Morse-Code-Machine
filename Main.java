@@ -5,7 +5,8 @@
 public class Main {
     public static final void main(String[] args) {
         MorseMaster carl = new MorseMaster();
-        System.out.println(carl.decipher("... --- ..."));
+        String hi = carl.decipher("... --- ...");
+        System.out.println(hi);
     }
 }
 
