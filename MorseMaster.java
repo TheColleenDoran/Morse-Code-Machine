@@ -7,8 +7,6 @@ public class MorseMaster {
         char[] deciphered = new char[bits.length/2]; //creating and array for the deciphered characters
         int pen = 0; //pointer for deciphered array
 
-        print(bits);
-
         try {
             char temp = '\0'; //sets temp to null character
             for(int i = 0; i < bits.length; i++){ //going character by character to decipher
@@ -38,9 +36,7 @@ public class MorseMaster {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        print(deciphered);
-        String message = deciphered.toString(); //converting  array of char to sting not working
-        System.out.println("Message: " + message);
+        String message = toString(deciphered);
         return message;
     }
 
@@ -49,5 +45,14 @@ public class MorseMaster {
             System.out.print(here[i]);
         }
         System.out.print("\n");
+    }
+
+    public String toString(char[] here){
+        String result = "";
+        for(int i = 0; i < here.length; i++){
+            result = result + here[i];
+        }
+        result.trim();
+        return result;
     }
 }
