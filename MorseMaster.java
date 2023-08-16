@@ -1,7 +1,7 @@
 public class MorseMaster {
     Tree decipherTree = Tree.buildMorseCodeTree(); //builds deciphering tree
     
-    public String decipher(String code){ //taking in the morse code to be deciphered
+    public String decipher(String code){ //converts morse code into plaintext
         
         char[] bits = code.toCharArray(); //converting the String of morse code into an array of hopefully dots, dashes, and spaces
         char[] deciphered = new char[bits.length/2]; //creating and array for the deciphered characters
@@ -38,6 +38,12 @@ public class MorseMaster {
         }
         String message = toString(deciphered);
         return message;
+    }
+
+    public String encipher(String message) { // converts plaintext into morse code
+        String code = "";
+        //do work here
+        return code;
     }
 
     public void print(char[] here){
