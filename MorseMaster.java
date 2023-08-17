@@ -1,3 +1,5 @@
+import java.lang.*;
+
 public class MorseMaster {
     Tree decipherTree = Tree.buildMorseCodeTree(); //builds deciphering tree
     
@@ -43,6 +45,9 @@ public class MorseMaster {
     public String encipher(String message) { // converts plaintext into morse code
         String code = "";
         //do work here
+        char[] bits = message.toCharArray();
+        //figure out best way to encode
+        //should be something better than a switch case or direct substitution
         return code;
     }
 
