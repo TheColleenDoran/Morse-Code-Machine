@@ -11,8 +11,9 @@ public class Main {
         System.out.println(hi);
         // hi = carl.encipher("hi");
         // System.out.println(hi);
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader in = null;
         try {
+            in = new BufferedReader(new InputStreamReader(System.in));
             System.out.print("Name: ");
             String name = in.readLine();
             System.out.println(name);
