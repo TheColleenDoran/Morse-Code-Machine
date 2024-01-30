@@ -51,6 +51,19 @@ public class MorseMaster {
         return code;
     }
 
+    public static String[][] makeMasterList() {
+        String[][] morseToLetters = new String[26][2];
+        char letter = 'a';
+
+        for(int i = 0; i < 26; i++) {
+
+            morseToLetters[i][0] = "" + letter;
+            letter++;
+        }
+
+        return morseToLetters;
+    }
+
     public void print(char[] here){
         for(int i = 0; i < here.length; i++){
             System.out.print(here[i]);
