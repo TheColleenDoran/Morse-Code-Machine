@@ -64,6 +64,13 @@ public class MorseMaster {
         return morseToLetters;
     }
 
+    public void printMasterList(String[][] list) {
+        System.out.println("Master List:");
+        for (int i = 0; i < list.length; i++) {
+            System.out.println("\t<" + list[i][0] + ", " + list[i][1] + ">");
+        }
+    }
+
     public void print(char[] here){
         for(int i = 0; i < here.length; i++){
             System.out.print(here[i]);

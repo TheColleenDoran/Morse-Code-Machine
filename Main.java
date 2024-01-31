@@ -11,6 +11,9 @@ public class Main {
         System.out.println(hi);
         // hi = carl.encipher("hi");
         // System.out.println(hi);
+        String[][] theList = carl.makeMasterList();
+        printMasterList(theList);
+
         BufferedReader in = null;
         try {
             in = new BufferedReader(new InputStreamReader(System.in));
